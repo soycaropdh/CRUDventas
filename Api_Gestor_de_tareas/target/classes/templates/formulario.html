@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Formulario de tarea</title>
+</head>
+<body>
+<h1>Formularuo de Tarea</h1>
+<form th:object="${tarea}"th:action="${accion}" method="post">
+ <input type="hidden" th:field="*{id}">
+  <label>Titulo : <input type="text" th:field="*{titulo}"/></label><br/>
+    <label>Descripcion : <input type="text" th:field="*{descripcion}"/></label><br/>
+    <label>Fecha de inicio : <input type="text" th:field="*{fechaDeInicio}"/></label><br/>
+    <label>Fecha limite : <input type="text" th:field="*{fechaLimite}"/></label><br/>
+    <label>Estado : <input type="text" th:field="*{estado}"/></label><br/>
+<button type="submit">Guardar</button>
+</form>
+
+<a href="/tareas">Volver al listado de tareas</a>
+
+
+</body>
+</html>
